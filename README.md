@@ -1,4 +1,4 @@
-<p><img style="width:100%; max-height: 450px" alt="banner" src="./assets/images/project-2.png"/></p>
+# Personal Site
 
 This is the Github Pages website for [Kaiyan M. Lee](https://kaiyanlee.github.io) built using the Hugo static site generator. It features a custom captcha, css navbar, six sections, and a decent lighthouse score.
 
