@@ -1,0 +1,30 @@
+<header>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="navbar-button">
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+    </label>
+    <div class="navbar-menu-background"></div>
+    <ul class="navigation">
+        {{ range .Site.Params.navigation }}
+        <li>
+        <a href="{{ .link }}"> {{ .title }} </a>
+        </li>
+        {{ end }}
+    </ul>
+    <a href="/" class="logo">
+        {{ with .Site.Params.logo }}
+            {{ (resources.Get .).Content | safeHTML }}
+        {{ end }}
+    </a>
+    <ul class="socials">
+        {{ range .Site.Params.socials }}
+        <li>
+        <a href="{{ .link }}">
+            {{ (resources.Get .icon).Content | safeHTML }}
+        </a>
+        </li>
+        {{ end }}
+    </ul>
+</header>

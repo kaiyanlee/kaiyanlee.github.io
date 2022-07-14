@@ -1,0 +1,24 @@
+<section id="skills">
+    <div class="section-header left"><h2>My Skills</h2></div>
+    <div class="content">
+        {{ range .Site.Params.skills }}
+          <div class="skill-group">
+            <h4><span>{{ (resources.Get .icon).Content | safeHTML }}</span><span>{{ .title }}</span></h4>
+            <ul>
+              {{ range .items }}
+                  <li>
+                      <span>
+                          {{ .name }}
+                      </span>
+                      <span class="progress">
+                        <span class="percentage" style="width: {{ .percentage }}">
+                        </span>
+                      </span>
+                  </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+        </div>
+    </div>
+</section>

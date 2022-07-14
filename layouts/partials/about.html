@@ -1,0 +1,10 @@
+<section id="about">
+    <div class="section-header right"><h2>About Me</h2></div>
+    <div class="content">
+        <img src="{{ (resources.Get .Site.Params.about.image).RelPermalink }}">
+        <div class="text">
+            <h2>{{ .Site.Params.about.introduction }}</h2>
+            <p>{{ .Site.Params.about.description | markdownify }}</p>
+        </div>
+    </div>
+</section>

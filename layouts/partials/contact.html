@@ -1,0 +1,40 @@
+<section id="contact">
+  <div class="section-header"><h2>Contact Me</h2></div>
+  <div id="captcha-container" class="captcha">
+    <p>To have the contact form be revealed please complete this very simple verification question:</p>
+    <noscript> Error: You need JavaScript enabled! </noscript>
+    <canvas id="captcha-question" width="100px" height="24px"></canvas>
+    <form action="javascript:;" onsubmit="verifyCaptcha()">
+      <input id="captcha-answer" type="text" name="subject" placeholder="Your answer to the question..." />
+    </form>
+  </div>
+  <div id="contact-container" class="content">
+    <div class="information">
+      <h3>Let's Get in Touch!</h3>
+      <p>{{ .Site.Params.contact.note | markdownify }}</p>
+      <div class="contact-item email">
+        <span>{{ (resources.Get "/images/icons/mail-star-fill.svg").Content | safeHTML }}</span>
+        <span id="contact-email"> {{ .Site.Params.contact.email }} </span>
+      </div>
+      <div class="contact-item address">
+        <span>{{ (resources.Get "/images/icons/pin-distance-fill.svg").Content | safeHTML }}</span>
+        <span id="contact-address"> {{ .Site.Params.contact.address }} </span>
+      </div>
+      <div class="contact-item phone-number">
+        <span>{{ (resources.Get "/images/icons/phone-fill.svg").Content | safeHTML }}</span>
+        <span id="contact-phone"> {{ .Site.Params.contact.phone }} </span>
+      </div>
+    </div>
+    <form id="contact-form" method="get" enctype="text/plain">
+      <input type="text" name="fullname" placeholder="Your full name..." />
+      <input type="text" name="subject" placeholder="Your last name..." />
+      <textarea
+        name="subject"
+        placeholder="Write your message... (You need mailing software installed on your device to handle the 'mailto' protocol.)"
+      ></textarea>
+      <input class="button" type="submit" value="Submit" />
+    </form>
+  </div>
+  {{ $js := resources.Get "/js/captcha.js" | resources.Minify }}
+  <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+</section>

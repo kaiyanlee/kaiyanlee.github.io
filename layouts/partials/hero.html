@@ -1,0 +1,8 @@
+<section id="hero">
+    <div class="text">
+      <h1>{{ .Site.Params.author.introduction }}</h1>
+      <p>{{ .Site.Params.author.description | markdownify }}</p>
+    </div>
+    <img src="{{ (resources.Get .Site.Params.author.image).RelPermalink }}" width="300px" height="350px" />
+</section>
+ 

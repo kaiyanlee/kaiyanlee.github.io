@@ -1,0 +1,16 @@
+<section id="specializations">
+    <div class="section-header"><h2>Specializations</h2></div>
+    <ul>
+        {{ range .Site.Params.specializations }}
+            <li>
+                <img src="{{ (resources.Get .image).RelPermalink }}" />
+                <h2>
+                  {{ .name }}
+                </h2>
+                <p>
+                  {{ .description | markdownify }}
+                </p>
+            </li>
+        {{ end }}
+    </ul>
+</section>

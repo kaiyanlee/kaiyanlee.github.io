@@ -1,0 +1,17 @@
+<section id="work">
+    <div class="section-header right"><h2>My Projects</h2></div>
+    <div class="content">
+        {{ range .Site.Params.projects }}
+            <div class="project">
+                <a class="image-container" href="{{ .link }}">
+                    <img src="{{ (resources.Get .image).RelPermalink }}" width="720px" height="400px" />
+                </a>
+                <div class="text">
+                    <h2><a href="{{ .link }}">{{ .name }}</a></h2>
+                    <small>{{ .date }}</small>
+                    <p>{{ .description | markdownify }}</p>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</section>

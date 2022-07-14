@@ -1,0 +1,247 @@
+# Copyright (c) 2022 Kaiyan M. Lee
+#
+# This website is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License v3.0.
+
+title: "Kaiyan M. Lee"
+baseURL: "https://kaiyanlee.github.io/"
+buildFuture: true
+disableHugoGeneratorInject: true
+disableLiveReload: true
+includeNewer: true
+languageCode: "en-us"
+preserveTaxonomyNames: true
+pygmentsStyle: "monokai"
+enableRobotsTXT: true
+
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  logo: /images/logo.svg
+
+  contact:
+    note: You can contact me at any time. You may also request my résumé if you are a recruiter.
+    phone: "UTNWeWNtVnVkR3g1SUZWdVlYWmhhV3hoWW14bA=="
+    address: "VDI1MFlYSnBieXdnUTJGdVlXUmg="
+    email: "YTJGcGVXRnVMbTB1YkdWbFFIQnRMbTFs"
+
+  author:
+    name: "Kaiyan"
+    introduction: "Hello, I am Kaiyan M. Lee"
+    image: /images/portrait.png
+    description: "I am a fullstack software developer and multimedia technology enthusiast. I like design,
+      I like code, and I love helping people build their own successful projects."
+
+  about:
+    introduction: "Developer and Designer"
+    image: /images/portrait-2.png
+    description: "I was raised and currently reside in Canada. I taught my self how to code because I have always been fascinated by
+      computers and their boundless digital worlds.\n\nAs a developer, I strive to balance my artistic and technical sides to create applications
+      that function in accordance with their requirements and constraints."
+
+  skills:
+    - title: Interpersonal
+      icon: /images/icons/team-fill.svg
+      items:
+        - name: Commitment
+          percentage: 100%
+        - name: Leadership
+          percentage: 30%
+        - name: Communication
+          percentage: 70%
+        - name: Empathy
+          percentage: 60%
+        - name: Motivation
+          percentage: 80%
+        - name: Teamwork
+          percentage: 60%
+        - name: Positivity
+          percentage: 80%
+        - name: Patience
+          percentage: 80%
+        - name: Flexibility
+          percentage: 100%
+        - name: Responsibility
+          percentage: 80%
+
+    - title: Tools/Software
+      icon: /images/icons/tools-fill.svg
+      items:
+        - name: Qt/QtQuick
+          percentage: 100%
+        - name: ReactJS
+          percentage: 60%
+        - name: GatsbyJS
+          percentage: 60%
+        - name: Inkscape
+          percentage: 90%
+        - name: Krita
+          percentage: 80%
+        - name: Figma
+          percentage: 50%
+        - name: GNU/Linux
+          percentage: 80%
+        - name: Windows
+          percentage: 40%
+        - name: Hugo
+          percentage: 90%
+        - name: Office Suite
+          percentage: 75%
+        - name: Blender
+          percentage: 70%
+        - name: Adobe Photoshop
+          percentage: 70%
+        - name: SQLite
+          percentage: 50%
+        - name: Godot
+          percentage: 50%
+        - name: Github
+          percentage: 90%
+
+    - title: Technical Skills
+      icon: /images/icons/code-s-slash-fill.svg
+      items:
+        - name: C/C++
+          percentage: 80%
+        - name: Go
+          percentage: 90%
+        - name: TypeScript
+          percentage: 80%
+        - name: JavaScript
+          percentage: 80%
+        - name: Python
+          percentage: 60%
+        - name: Dart
+          percentage: 40%
+        - name: Bash
+          percentage: 30%
+        - name: HTML
+          percentage: 90%
+        - name: CMake
+          percentage: 90%
+        - name: QML
+          percentage: 100%
+        - name: Vala
+          percentage: 30%
+        - name: SQL
+          percentage: 65%
+        - name: SASS
+          percentage: 80%
+        - name: CSS
+          percentage: 80%
+        - name: SEO
+          percentage: 40%
+        - name: Debugging
+          percentage: 70%
+        - name: Testing
+          percentage: 60%
+        - name: CI/CD
+          percentage: 60%
+        - name: Design
+          percentage: 80%
+        - name: English
+          percentage: 90%
+
+  projects:
+    - name: "Sumartian Studios"
+      date: "2021 - Current"
+      description: "Began a multimedia science-fiction project that merged fantasy into reality in
+        _The Tauroboros_. This resulted in several pieces of real software."
+      image: "/images/project-1.png"
+      link: "https://github.com/sumartian-studios"
+
+    - name: "Portfolio Site"
+      date: "2022"
+      description: "Built a portfolio website from scratch using Hugo for my personal usage. It features six unique
+        sections, a minimal design, and a responsive layout."
+      image: "/images/project-2.png"
+      link: "https://github.com/kaiyanlee/kaiyanlee.github.io"
+
+    - name: "Foodsheep"
+      date: "2022"
+      description: "Started working on a web-based health application for diet management. The goal is to create an all-in-one offline eating activity tracker."
+      image: "/images/project-3.png"
+      link: "https://github.com/kaiyanlee/foodsheep"
+
+    - name: "Kromite Studios"
+      date: "2022 - Current"
+      description: "Founded a website development agency that builds websites and applications for clients using a wide range of technologies."
+      image: "/images/project-4.png"
+      link: "https://kromite-studios.github.io"
+
+  specializations:
+    - name: Cross-Platform
+      image: "/images/specialization-1.png"
+      description: "I focus on modern cross-platform software technologies like Qt, the Web, Flutter, and GTK."
+
+    - name: Multimedia
+      image: "/images/specialization-2.png"
+      description: "I enjoy learning about the latest media development technologies and IETF standards."
+
+    - name: Experiences
+      image: "/images/specialization-3.png"
+      description: "I use my design intuition, creativity, and technical abilities to develop software experiences."
+
+  navigation:
+    - title: About
+      link: "/?section=1#about"
+    - title: Focus
+      link: "/?section=2#specializations"
+    - title: Skills
+      link: "/?section=3#skills"
+    - title: Work
+      link: "/?section=4#work"
+    - title: Contact
+      link: "/?section=5#contact"
+
+  socials:
+    - title: Github
+      icon: /images/icons/twitter-fill.svg
+      link: https://twitter.com/kaiyannlee
+    - title: Twitter
+      icon: /images/icons/github-fill.svg
+      link: https://github.com/kaiyanlee
+    - title: Mail
+      icon: /images/icons/message-fill.svg
+      link: "#contact"
+    - title: Phone
+      icon: /images/icons/phone-fill.svg
+      link: "#contact"
+
+  copyright: Copyright 2022 © Kaiyan M. Lee | Canada
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+
+  tdewolff:
+    css:
+      keepCSS2: false
+      precision: 0
+    html:
+      keepComments: false
+      keepConditionalComments: false
+      keepDefaultAttrVals: false
+      keepDocumentTags: false
+      keepEndTags: false
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+      keepVarNames: true
+      noNullishOperator: false
+      precision: 0
+    json:
+      keepNumbers: false
+      precision: 0
+    svg:
+      keepComments: false
+      precision: 0
+    xml:
+      keepWhitespace: false
