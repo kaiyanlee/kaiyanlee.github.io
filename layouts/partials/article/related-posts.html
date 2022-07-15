@@ -1,0 +1,30 @@
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $related := $pages.RelatedIndices . "tags" | first 4 }}
+{{ with $related }}
+  {{ range . }}
+    <div class="post-card">
+      {{ if .Params.image }}
+      <div class="post-featured">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+        </a>
+      </div>
+      {{ end }}
+      <div class="card-info">
+        <h3 class="card-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <div class="card-content">
+          {{ if eq .Type "projects" }}
+            <p>{{ .Params.quote }}</p>
+          {{ else }}
+            <p>{{ .Summary }}</p>
+          {{ end }}
+          <a class="read-more" href="{{ .RelPermalink }}">
+            Read More...
+          </a>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

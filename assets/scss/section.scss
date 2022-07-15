@@ -1,0 +1,43 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+.section-header {
+  position: relative;
+  padding: 4rem 1rem;
+  text-align: center;
+
+  &:after {
+    border-bottom: 2px solid rgba($color: $primary-color, $alpha: 0.2);
+    width: 100vw;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    background-color: $primary-background;
+    width: fit-content;
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: $small-max-width;
+    line-height: 3rem;
+  }
+
+  &.left {
+    h2 {
+      margin-left: 55%;
+    }
+  }
+
+  &.right {
+    h2 {
+      margin-right: 55%;
+    }
+  }
+}

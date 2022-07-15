@@ -1,0 +1,25 @@
+{{ define "content" }}
+<div class="page-wrap">
+  <div class="profile-container">
+    <div class="profile-image">
+      <a class="avatar-container" aria-label="Home" href="/">
+        <img alt="Avatar" class="avatar" src="{{ (resources.Get .Site.Params.author.portrait).RelPermalink }}" width="100px" height="100px" />
+      </a>
+      <a aria-label="Github" href="{{ .Site.Params.author.corner.link }} ">
+        {{ (resources.Get .Site.Params.author.corner.icon).Content | safeHTML }}
+      </a>
+    </div>
+    <h1 class="title">{{ .Site.Params.author.name }}</h1>
+    <div class="description">{{ .Site.Params.author.short }}</div>
+  </div>
+  <h2 class="page-title">- {{ title .Title }} -</h2>
+  {{ range (.Pages.GroupByDate "2006") }}
+  <h3 class="post-month">{{ .Key }}</h3>
+  {{ range.Pages }}
+  <div class="list-item">
+    <a href="{{ .RelPermalink }}" class="list-item-link">{{ .Title }}</a
+    ><span class="list-item-date">{{ .Date.Format "January 2, 2006" }}</span>
+  </div>
+  {{ end }} {{ end }}
+</div>
+{{ end }}

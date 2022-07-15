@@ -1,0 +1,19 @@
+{{ if (or .Params.categories .Params.tags) }}
+<div class="post-meta">
+  <div class="meta-content">
+    {{ with .Params.categories }}
+    <div class="meta-label">Written In</div>
+    <div class="meta-title">{{ range . }}<span><a href="/categories/{{ . | urlize }}">{{ . }}</a></span>{{ end }}</div>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div class="meta-label">Tagged With</div>
+    <div class="meta-title">{{ range . }}<span><a href="/tags/{{ . | urlize }}"> #{{ . }}</a></span>{{
+      end }}</div>
+    {{ end }}
+  </div>
+  {{ with .Params.icon }}
+  {{ $icon := (resources.Get .).RelPermalink }}
+  {{ with $.Params.categories }}<div class="meta-icon"><img loading="lazy" alt="Category image" src="{{ $icon }}" /></div>{{ end }}
+  {{ end }}
+</div>
+{{ end }}

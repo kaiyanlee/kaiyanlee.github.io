@@ -1,0 +1,35 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+// Typography
+// -----------------------------------------------------------------------------
+
+$primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// Measurements
+// -----------------------------------------------------------------------------
+
+$large-max-width: 1150px;
+$small-max-width: 900px;
+$medium-max-width: 770px;
+$tiny-max-width: 500px;
+
+// Colors
+// -----------------------------------------------------------------------------
+
+$primary-color: #001747;
+$primary-background: #fff;
+$accent-color: #4285f4;
+
+$secondary-color: #666666;
+$background-color: #ffffff;
+$background-light-color: #f6f6f6;
+$background-dark-color: #aaaaaa;
+$border-color: #dddddd;
+$quote-color: #333333;
+$code-background-color: #181818;
+$code-foreground-color: #eeeeee;
+
+$shadow: 1px 1px 12px rgba(50, 50, 93, 0.15);

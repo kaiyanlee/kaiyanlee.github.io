@@ -1,0 +1,16 @@
+<div class="post-header">
+  {{ if not .Date.IsZero }}
+    <div class="post-date">
+      <time datetime="{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}" itemprop="datePublished">
+        {{ .Date.Format (.Site.Params.dateFormatToUse | default "January 2, 2006") }}
+      </time>
+    </div>
+  {{ end }}
+  <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+  {{ partial "article/featured-image.html" . }}
+  {{ with .Params.quote }}
+    <div class="post-featured">
+      <blockquote>{{ . | markdownify }}</blockquote>
+    </div>
+  {{ end }}
+</div>

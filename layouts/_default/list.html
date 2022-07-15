@@ -1,0 +1,13 @@
+{{ define "content" }}
+  <div class="page-wrap">
+    <h2 class="page-title">- {{ title .Title }} -</h2>
+    {{ range (.Pages.GroupByDate "2006") }}
+      <h3 class="post-month">{{ .Key }}</h3>
+      {{ range.Pages }}
+        <div class="list-item">
+          <a href="{{ .RelPermalink }}" class="list-item-link">{{ .Title }}</a><span class="list-item-date">{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,140 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+#skills {
+  .skill-group {
+    position: relative;
+    margin: 0 auto;
+    max-width: $large-max-width;
+    color: $primary-background;
+
+    h4 {
+      margin: 0 0 -1px 20%;
+      width: 200px;
+      text-align: center;
+      padding: 0.75rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: small;
+      line-height: 0;
+      gap: 0.5rem;
+      border-radius: 8px 8px 0 0;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    }
+
+    ul {
+      all: unset;
+      min-height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1.5rem 1rem;
+      margin: 0;
+
+      li {
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+        font-weight: bold;
+
+        .progress {
+          position: relative;
+          height: 4px;
+          background-color: darken($accent-color, 15%);
+          border-radius: 4px;
+
+          .percentage {
+            height: 4px;
+            position: absolute;
+            z-index: 1;
+            transition: width 0.5s;
+            background-color: $primary-background;
+            border-radius: 4px;
+
+            &:hidden {
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+
+    h4 {
+      background: lighten($accent-color, 5%);
+    }
+
+    ul {
+      background: linear-gradient(180deg, lighten($accent-color, 5%), darken($accent-color, 10%));
+    }
+
+    &:nth-child(even) {
+      color: $primary-color;
+
+      ul li .progress {
+        background-color: darken($primary-background, 15%);
+
+        .percentage {
+          background-color: $accent-color;
+        }
+      }
+
+      ul,
+      h4 {
+        background: $primary-background;
+      }
+    }
+
+    &:first-child {
+      ul {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    &:last-child {
+      ul {
+        border-radius: 0 0 8px 8px;
+        padding-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: $tiny-max-width) {
+      ul li {
+        min-width: 100px;
+      }
+
+      &:first-child {
+        ul {
+          border-radius: unset;
+        }
+      }
+
+      &:last-child {
+        ul {
+          border-radius: unset;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: -3rem;
+    }
+
+    &:not(:last-child) {
+      ul {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

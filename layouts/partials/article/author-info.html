@@ -1,0 +1,8 @@
+<div class="post-author-info">
+  <div class="avatar">
+    <a aria-label="Home" href="/">
+      <img loading="lazy" alt="Portrait" src="{{ (resources.Get .Site.Params.author.portrait).RelPermalink }}" width="74px" height="74px" />
+    </a>
+  </div>
+  <div class="description"><p>{{ .Site.Params.author.description | markdownify }}</p></div>
+</div>

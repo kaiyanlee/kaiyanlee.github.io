@@ -1,0 +1,32 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+#specializations {
+  ul {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1rem 2rem;
+
+      p {
+        width: 260px;
+      }
+
+      img {
+        max-width: 200px;
+        max-height: 200px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

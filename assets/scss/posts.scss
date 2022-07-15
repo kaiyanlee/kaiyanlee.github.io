@@ -1,0 +1,613 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+  padding-top: 2rem;
+
+  .profile-image {
+    vertical-align: center;
+    width: 100px;
+    margin: auto;
+    position: relative;
+
+    .avatar-container {
+      background-color: currentColor;
+      padding: 2px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      overflow: hidden;
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        background-color: $primary-background;
+        border-radius: inherit;
+      }
+    }
+
+    svg {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $primary-background;
+      bottom: 6px;
+      fill: $primary-color;
+      right: -0.5em;
+      padding: 7px;
+
+      &:hover {
+        fill: $accent-color;
+        transition: fill 0.2s ease-in;
+      }
+    }
+  }
+
+  .title {
+    font-size: 2.25rem;
+    margin: 0.5em 0 0.25em 0;
+  }
+
+  .description {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-top: 0.25em;
+  }
+}
+
+.page-wrap {
+  max-width: $medium-max-width;
+  margin: 0 auto;
+  flex: 1;
+  padding: 0 2rem 8rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: $large-max-width) {
+    padding-top: 8rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .post-header {
+    text-align: center;
+    margin-top: 2.5rem;
+
+    .post-date {
+      margin: 1.5em 0;
+      color: $secondary-color;
+    }
+
+    .post-title {
+      font-size: 2.5em;
+      padding: 0.5em 0;
+      line-height: 1.5em;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin: 0;
+    }
+
+    .post-featured {
+      font-size: 1.1em;
+
+      img {
+        display: inline-block;
+        width: 100%;
+        max-height: 380px;
+        padding: 1.75em 0;
+        overflow: hidden;
+        border-bottom: 1px solid $border-color;
+
+        @media (max-width: $medium-max-width) {
+          object-fit: contain;
+          height: auto;
+        }
+      }
+
+      blockquote {
+        font-style: italic;
+        padding: 1.5rem 5rem 1.75rem;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  .post-content {
+    padding: 0.75rem 0 0.25rem 0;
+    overflow: hidden;
+    user-select: text;
+
+    &:last-child {
+      padding-bottom: 6rem;
+    }
+
+    code {
+      word-break: break-all;
+      user-select: all;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    a {
+      color: $accent-color;
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0.5em 0;
+      padding: 0.1rem 0;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      line-height: 1.6em;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      line-height: 1.5em;
+      font-size: 1.5em;
+      margin-top: 1.15em;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 2em 0 2em 2em;
+    }
+
+    code {
+      padding: 2px 4px;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      line-height: 1.5em;
+      padding: 1.5rem;
+      margin: 2em 0;
+      display: block;
+      overflow: auto;
+      position: relative;
+      background-color: $code-background-color !important;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      color: $code-foreground-color;
+
+      code {
+        all: unset;
+      }
+    }
+
+    li {
+      padding-left: 0.25em;
+    }
+
+    table {
+      margin: 1.5em 0;
+      max-width: 100%;
+      display: inline-block;
+      border-spacing: 0;
+      overflow-x: auto;
+      border-collapse: separate;
+      border: solid $border-color 1px;
+      border-radius: 0.25rem;
+      box-shadow: $shadow;
+
+      th,
+      td {
+        padding: 0.5em 1em;
+        border-left: solid $border-color 1px;
+        border-top: solid $border-color 1px;
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+
+      th {
+        background-color: $background-light-color;
+        border-top: none;
+      }
+    }
+
+    figure {
+      text-align: center;
+      margin: 1.5em 0;
+    }
+
+    video,
+    img {
+      display: block;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      margin: 1.5rem 0 2rem 0;
+    }
+
+    figcaption:not(:empty) {
+      color: $secondary-color;
+      display: inline-block;
+      font-style: italic;
+      padding-top: 0.5em;
+    }
+  }
+
+  .post-author-info {
+    display: flex;
+    padding: 2rem 0;
+    align-items: center;
+    font-style: italic;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    content-visibility: auto;
+    word-spacing: 0.1em;
+    color: $quote-color;
+
+    .avatar {
+      margin: 1em 1.25em 1em 0;
+
+      img {
+        display: block;
+        color: $border-color;
+        border-right: 1px solid currentColor;
+        border-left: 1px solid currentColor;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        height: 64px;
+        width: 64px;
+        padding: 12px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        &:hover {
+          transition: color 0.4s;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .post-meta {
+    line-height: 2em;
+    margin: 3rem 0;
+    padding: 2rem;
+    font-size: 0.8em;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background-color: $background-light-color;
+    box-shadow: $shadow;
+    content-visibility: auto;
+
+    .meta-content {
+      padding: 1rem 2rem 1rem 1rem;
+      text-align: right;
+      width: 80%;
+
+      .meta-label {
+        color: $secondary-color;
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+
+      .meta-title {
+        line-height: 1.35em;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+        word-spacing: 0.15rem;
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+
+    .meta-icon {
+      width: 15%;
+
+      img {
+        width: 100%;
+        margin: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .post-navigation {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    border-top: 1px solid $border-color;
+    content-visibility: auto;
+
+    &:last-child {
+      padding-bottom: 3rem;
+    }
+
+    .nav-label {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      color: $secondary-color;
+      font-weight: bold;
+      display: block;
+    }
+
+    .nav-title {
+      margin-top: 0;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      font-weight: bold;
+    }
+
+    .post-nav {
+      width: 50%;
+
+      &.previous {
+        padding-right: 0.5em;
+      }
+
+      &.next {
+        text-align: right;
+        padding-left: 0.5em;
+      }
+    }
+  }
+
+  .post-card {
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    padding: 4em 0;
+    border-top: 1px solid $border-color;
+    content-visibility: auto;
+
+    .post-featured {
+      width: 35%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        max-height: 150px;
+        display: block;
+      }
+    }
+
+    .card-info {
+      &:not(:first-child) {
+        width: 60%;
+        padding: 2em 0 1em 2.5em;
+      }
+
+      .card-title {
+        line-height: 1.5em;
+        font-size: 1.8em;
+        margin-top: 0;
+      }
+
+      .card-content {
+        .read-more {
+          font-weight: bold;
+          color: $accent-color;
+        }
+      }
+
+      .card-footer {
+        .card-tags {
+          margin-top: 1em;
+          line-height: 2em;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+      .card-info {
+        &:not(:first-child) {
+          padding: 2em 2.5em 1em 0;
+        }
+      }
+    }
+  }
+
+  .page-title {
+    text-align: center;
+    width: 80%;
+    margin: 1.5em auto;
+  }
+
+  .post-month {
+    margin-top: 1em;
+    margin-left: 1rem;
+  }
+
+  .list-item {
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-grid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .list-grid-item {
+    display: flex;
+    max-height: 320px;
+    margin-bottom: 2em;
+    overflow: hidden;
+  }
+
+  .list-project-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .list-project-meta {
+    background: $primary-background;
+    margin-top: 2em;
+    padding: 0 2em;
+    position: absolute;
+  }
+
+  .list-item-link {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 60%;
+  }
+
+  .list-item-date {
+    text-align: right;
+    color: $secondary-color;
+    margin-right: 2rem;
+  }
+
+  .more-post {
+    text-align: right;
+  }
+}
+
+@media (max-width: $tiny-max-width) {
+  body {
+    font-size: 1rem;
+  }
+
+  .profile-container {
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      padding: 0.5em 0em;
+    }
+  }
+}
+
+@media (max-width: $small-max-width) {
+  .tabs {
+    .tab-content {
+      .tab-content-item {
+        flex: 100%;
+      }
+    }
+  }
+
+  .profile-container {
+    .description {
+      padding: 0.5em 0em;
+    }
+  }
+
+  .page-wrap {
+    padding-top: 5rem;
+
+    .post-header {
+      .post-date {
+        font-size: 0.9em;
+      }
+      .post-title {
+        font-size: 2.25em;
+      }
+      .post-featured {
+        img {
+          max-height: 300px;
+        }
+        blockquote {
+          margin: 0;
+          padding: 2em 1em;
+        }
+      }
+    }
+
+    .post-content {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-left: 0rem;
+      }
+    }
+
+    .post-meta {
+      padding: 2rem 0;
+
+      .meta-content {
+        width: 100%;
+        padding: 0 2.5rem;
+      }
+
+      .meta-icon {
+        display: none;
+      }
+    }
+
+    .post-author-info {
+      padding: 1em 0;
+    }
+
+    .post-card {
+      flex-wrap: wrap;
+
+      .post-featured {
+        width: 100%;
+        padding-bottom: 2em;
+
+        img {
+          max-height: 340px;
+        }
+      }
+
+      .card-info {
+        width: 100% !important;
+        padding: 0 !important;
+      }
+    }
+
+    .list-item-date {
+      display: none;
+    }
+
+    .list-item-link {
+      max-width: 90%;
+    }
+
+    .categories-card {
+      .card-item {
+        width: 95%;
+      }
+    }
+  }
+}

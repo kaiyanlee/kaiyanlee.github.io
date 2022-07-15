@@ -1,0 +1,44 @@
+<figure {{ with .Get "class" }} class="{{ . }}" {{ end }}>
+    {{ if .Get "link" }}
+        <a href="{{ .Get "link" }}" {{ with .Get "target" }} target="{{ . }}" {{ end }} {{ with .Get "rel" }} rel="{{ . }}" {{ end }}>
+    {{ end }}
+
+    {{ if eq (.Get "type") "video" }}
+        {{ if .IsNamedParams }}
+            <video loading="lazy" src="{{ .Get "src" }}" poster="{{ .Get "poster" }}" autoplay loop playsinline>
+                Sorry, your browser doesn't support embedded videos, but don't worry, you can
+              <a href="{{ .Get "src" }}">download it</a>
+                and watch it with your favorite video player!
+            </video>
+        {{ else }}
+            <video loading="lazy" src="{{ .Get 0}}">
+                Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="{{ .Get 0}}">download it</a> and watch it with your favorite video player!
+            </video>
+        {{ end }}
+    {{ else }}
+    <img loading="lazy" data-src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }} alt="{{ with .Get "alt" }} {{ . }} {{ else }} {{ .Get "caption" | markdownify| plainify }} {{ end }}" {{ end }} {{ with .Get "width" }} width="{{ . }}" {{ end }} {{ with .Get "height" }} height="{{ . }}" {{ end }} />
+    {{ end }}
+
+    {{ if .Get "link" }}
+        </a>
+    {{ end }}
+
+    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+        <figcaption>
+            {{ with (.Get "title") }}
+                <span>{{ . }}</span>
+            {{ end }}
+            {{ if or (.Get "caption") (.Get "attr") }}<p>
+                {{ .Get "caption" | markdownify }}
+                {{ with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{ end }}
+                {{ .Get "attr" | markdownify }}
+                {{ if .Get "attrlink" }}
+                </a>
+                {{ end }}
+            </p>
+            {{ end }}
+        </figcaption>
+    {{ end }}
+</figure>

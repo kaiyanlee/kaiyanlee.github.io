@@ -1,0 +1,11 @@
+<div class="post-content">
+  {{ with .Params.subtitle }}<h2>{{ . | markdownify }}</h2>{{ end }}
+  {{ $content := .Content }}
+  {{ $reAltIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" />" }}
+  {{ $reAltOut := ( printf "<figure><img loading=\"lazy\" data-sizes=\"auto\" src=\"$1\" alt=\"$2\"> <figcaption class=\"image-caption\">$2</figcaption> </figure>" ) }}
+  {{ $content = $content | replaceRE $reAltIn $reAltOut | safeHTML }}
+  {{ $reAltTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" title=\"([^\"]+)?\" />" }}
+  {{ $reAltTitleOut := ( printf "<figure><img loading=\"lazy\" src=\"$1\" data-sizes=\"auto\" alt=\"$2\" title=\"$3\"> <figcaption class=\"image-caption\">$2</figcaption> </figure>" ) }}
+  {{ $content = $content | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
+  {{ $content }}
+</div>

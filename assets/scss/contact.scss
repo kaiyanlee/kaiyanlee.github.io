@@ -1,0 +1,136 @@
+// Copyright (c) 2022 Kaiyan M. Lee
+//
+// This website is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License v3.0.
+
+#contact {
+  margin-bottom: 12rem;
+
+  input,
+  button,
+  textarea,
+  select,
+  option {
+    all: unset;
+    border-radius: 8px;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 0.25rem 0.5rem;
+    background-color: darken($primary-background, 5%);
+    border: 2px solid transparent;
+
+    &:focus {
+      border: 2px solid $accent-color;
+    }
+
+    &::placeholder {
+      color: $primary-color;
+      opacity: 0.5;
+    }
+  }
+
+  .captcha {
+    max-width: 450px;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    p {
+      max-width: 450px;
+    }
+
+    #captcha-question {
+      display: none;
+    }
+
+    form {
+      padding-top: 1rem;
+      width: 100%;
+    }
+  }
+
+  .content {
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2.5rem;
+    max-width: $small-max-width;
+    margin: 0 auto;
+    visibility: hidden;
+
+    input,
+    button,
+    textarea,
+    select,
+    option {
+      width: 100%;
+    }
+
+    .information {
+      flex-grow: 1;
+      max-width: 350px;
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        align-items: center;
+        font-size: 0.9rem;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: $primary-color;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      max-width: 100%;
+      gap: 0.5rem;
+
+      textarea {
+        height: 200px;
+      }
+
+      .button {
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: small;
+        user-select: none;
+        box-shadow: none;
+        opacity: 1;
+      }
+    }
+  }
+}

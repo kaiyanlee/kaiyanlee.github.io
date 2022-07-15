@@ -13,10 +13,32 @@ languageCode: "en-us"
 preserveTaxonomyNames: true
 pygmentsStyle: "monokai"
 enableRobotsTXT: true
+pluralizeListTitles: false
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: false
+summarylength: 30
 
-disableKinds:
-  - taxonomy
-  - term
+permalinks:
+  posts = "/:year/:filename/"
+
+module:
+  mounts:
+    - source: content
+      target: content
+    - source: content
+      target: assets
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
 
 params:
   logo: /images/logo.svg
@@ -28,11 +50,17 @@ params:
     email: "YTJGcGVXRnVMbTB1YkdWbFFIQnRMbTFs"
 
   author:
-    name: "Kaiyan"
+    name: "Kaiyan M. Lee"
     introduction: "Hello, I am Kaiyan M. Lee"
+    short: "Software Developer / Designer / Futurist"
+    portrait: /images/portrait-small.png
     image: /images/portrait.png
     description: "I am a fullstack software developer and multimedia technology enthusiast. I like design,
-      I like code, and I love helping people build their own successful projects."
+      I like code, and I love helping people build their own projects."
+    corner:
+      title: Github
+      icon: /images/icons/github-fill.svg
+      link: https://github.com/kaiyannlee
 
   about:
     introduction: "Developer and Designer"
@@ -187,8 +215,8 @@ params:
   navigation:
     - title: About
       link: "/?section=1#about"
-    - title: Focus
-      link: "/?section=2#specializations"
+    - title: Blog
+      link: "/posts"
     - title: Skills
       link: "/?section=3#skills"
     - title: Work
@@ -197,10 +225,10 @@ params:
       link: "/?section=5#contact"
 
   socials:
-    - title: Github
+    - title: Twitter
       icon: /images/icons/twitter-fill.svg
       link: https://twitter.com/kaiyannlee
-    - title: Twitter
+    - title: Github
       icon: /images/icons/github-fill.svg
       link: https://github.com/kaiyanlee
     - title: Mail

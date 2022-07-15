@@ -1,0 +1,11 @@
+{{ with .Params.image }}
+  {{ with resources.Get . }}
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+      <div class="post-featured">
+          <div class="image-container">
+            <img width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" alt="Featured Image" />
+          </div>
+      </div>
+    {{ end }}
+  {{ end }}
+{{ end }}

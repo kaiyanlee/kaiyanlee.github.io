@@ -1,0 +1,24 @@
+{{ if (or .PrevInSection .NextInSection) }}
+<div class="post-navigation">
+  <div class="post-nav previous">
+    {{ with .PrevInSection }}
+    <div class="nav-label">Previous</div>
+    <div class="nav-title">
+      <a href="{{ .RelPermalink }}" rel="previous" title="{{ .Title }}">
+        {{ .Title | truncate 30 }}
+      </a>
+    </div>
+    {{ end }}
+  </div>
+  <div class="post-nav next">
+    {{ with .NextInSection }}
+    <div class="nav-label">Next</div>
+    <div class="nav-title">
+      <a href="{{ .RelPermalink }}" rel="next" title="{{ .Title }}">
+        {{ .Title | truncate 30 }}
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
