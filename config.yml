@@ -193,12 +193,6 @@ params:
       image: "/images/project-3.png"
       link: "https://github.com/kaiyanlee/foodsheep"
 
-    - name: "Kromite Studios"
-      date: "2022 - Current"
-      description: "Founded a website development agency that builds websites and applications for clients using a wide range of technologies."
-      image: "/images/project-4.png"
-      link: "https://kromite-studios.github.io"
-
   specializations:
     - name: Cross-Platform
       image: "/images/specialization-1.png"
