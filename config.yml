@@ -44,30 +44,27 @@ params:
   logo: /images/logo.svg
 
   contact:
-    note: You can contact me at any time. You may also request my résumé if you are a recruiter.
+    note: Please feel free to reach out via email or phone for any opportunities or collaborations.
     phone: "UTNWeWNtVnVkR3g1SUZWdVlYWmhhV3hoWW14bA=="
     address: "VDI1MFlYSnBieXdnUTJGdVlXUmg="
     email: "YTJGcGVXRnVMbTB1YkdWbFFIQnRMbTFs"
 
   author:
     name: "Kaiyan M. Lee"
-    introduction: "Hello, I am Kaiyan M. Lee"
-    short: "Software Developer / Designer / Futurist"
-    portrait: /images/portrait-small.png
-    image: /images/portrait.png
-    description: "I am a fullstack software developer and multimedia technology enthusiast. I like design,
-      I like code, and I love helping people build their own projects."
+    introduction: "Hi there, I'm Kaiyan"
+    short: "Software Developer & Designer"
+    portrait: /images/small-portrait.png
+    image: /images/portrait-1.png
+    description: "I am a fullstack software developer with a strong foundation in both technical and creative disciplines. My approach combines rigorous software engineering practices with thoughtful design principles to deliver applications that are functional, performant, and user-focused."
     corner:
       title: Github
       icon: /images/icons/github-fill.svg
       link: https://github.com/kaiyannlee
 
   about:
-    introduction: "Developer and Designer"
+    introduction: "Fullstack Developer"
     image: /images/portrait-2.png
-    description: "I was raised and currently reside in Canada. I taught my self how to code because I have always been fascinated by
-      computers and their boundless digital worlds.\n\nAs a developer, I strive to balance my artistic and technical sides to create applications
-      that function in accordance with their requirements and constraints."
+    description: "Canadian software developer specialized in cross-platform development, multimedia AI technologies, and modern web frameworks with a commitment to code quality and maintainability."
 
   skills:
     - title: Interpersonal
@@ -105,9 +102,9 @@ params:
           percentage: 60%
         - name: Inkscape
           percentage: 90%
-        - name: Krita
+        - name: Tailwind CSS
           percentage: 80%
-        - name: Figma
+        - name: Affinity Studio
           percentage: 50%
         - name: GNU/Linux
           percentage: 80%
@@ -175,36 +172,34 @@ params:
   projects:
     - name: "Sumartian Studios"
       date: "2021 - Current"
-      description: "Began a multimedia science-fiction project that merged fantasy into reality in
-        _The Tauroboros_. This resulted in several pieces of real software."
-      image: "/images/project-1.png"
+      description: "A multimedia science-fiction project exploring the intersection of narrative and technology. Resulted in multiple software applications with emphasis on design quality and technical robustness."
+      image: "https://raw.githubusercontent.com/sumartian-studios/.github/master/assets/banner.png"
       link: "https://github.com/sumartian-studios"
 
     - name: "Portfolio Site"
       date: "2022"
-      description: "Built a portfolio website from scratch using Hugo for my personal usage. It features six unique
-        sections, a minimal design, and a responsive layout."
+      description: "A responsive portfolio website built with Hugo featuring a clean, minimal design. Demonstrates technical proficiency in modern web development and thoughtful information architecture."
       image: "/images/project-2.png"
       link: "https://github.com/kaiyanlee/kaiyanlee.github.io"
 
-    - name: "Foodsheep"
-      date: "2022"
-      description: "Started working on a web-based health application for diet management. The goal is to create an all-in-one offline eating activity tracker."
+    - name: "Miscellaneous Projects"
+      date: "2023 - Current"
+      description: "Built various projects for private clients, showcasing a diverse range of technical skills."
       image: "/images/project-3.png"
-      link: "https://github.com/kaiyanlee/foodsheep"
+      link: "https://github.com/kaiyanlee/kaiyanlee.github.io"
 
   specializations:
     - name: Cross-Platform
       image: "/images/specialization-1.png"
-      description: "I focus on modern cross-platform software technologies like Qt, the Web, Flutter, and GTK."
+      description: "Expertise in modern cross-platform development frameworks including Qt, Web technologies, Flutter, and GTK. Committed to creating software that delivers consistent experiences across multiple platforms."
 
     - name: Multimedia
       image: "/images/specialization-2.png"
-      description: "I enjoy learning about the latest media development technologies and IETF standards."
+      description: "Expertise in modern media development technologies and web standards. Committed to staying current with industry best practices and emerging technologies."
 
-    - name: Experiences
+    - name: User Experience
       image: "/images/specialization-3.png"
-      description: "I use my design intuition, creativity, and technical abilities to develop software experiences."
+      description: "Develops thoughtful user experiences through the integration of design principles, technical expertise, and human-centered approaches."
 
   navigation:
     - title: About
@@ -221,7 +216,7 @@ params:
   socials:
     - title: Twitter
       icon: /images/icons/twitter-fill.svg
-      link: https://twitter.com/kaiyannlee
+      link: https://github.com/kaiyanlee
     - title: Github
       icon: /images/icons/github-fill.svg
       link: https://github.com/kaiyanlee
@@ -232,7 +227,7 @@ params:
       icon: /images/icons/phone-fill.svg
       link: "#contact"
 
-  copyright: Copyright 2022 © Kaiyan M. Lee | Canada
+  copyright: Copyright 2026 © Kaiyan M. Lee | Made with ♥️ in Canada
 
 minify:
   disableCSS: false
@@ -245,11 +240,10 @@ minify:
 
   tdewolff:
     css:
-      keepCSS2: false
       precision: 0
     html:
       keepComments: false
-      keepConditionalComments: false
+      keepSpecialComments: false
       keepDefaultAttrVals: false
       keepDocumentTags: false
       keepEndTags: false

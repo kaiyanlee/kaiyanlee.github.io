@@ -308,7 +308,7 @@
     .meta-content {
       padding: 1rem 2rem 1rem 1rem;
       text-align: right;
-      width: 80%;
+      flex-grow: 1;
 
       .meta-label {
         color: $secondary-color;
@@ -328,6 +328,7 @@
 
     .meta-icon {
       width: 15%;
+      padding: 1rem;
 
       img {
         width: 100%;
@@ -427,6 +428,7 @@
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
+
       .card-info {
         &:not(:first-child) {
           padding: 2em 2.5em 1em 0;
@@ -536,13 +538,16 @@
       .post-date {
         font-size: 0.9em;
       }
+
       .post-title {
         font-size: 2.25em;
       }
+
       .post-featured {
         img {
           max-height: 300px;
         }
+
         blockquote {
           margin: 0;
           padding: 2em 1em;
@@ -551,6 +556,7 @@
     }
 
     .post-content {
+
       h1,
       h2,
       h3,
