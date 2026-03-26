@@ -64,7 +64,7 @@ params:
   about:
     introduction: "Fullstack Developer"
     image: /images/portrait-2.png
-    description: "Canadian software developer specialized in cross-platform development, multimedia AI technologies, and modern web frameworks with a commitment to code quality and maintainability."
+    description: "Specialized in cross-platform development, multimedia AI technologies, and modern web frameworks with a commitment to code quality and maintainability."
 
   skills:
     - title: Interpersonal
@@ -171,7 +171,7 @@ params:
 
   projects:
     - name: "Sumartian Studios"
-      date: "2021 - Current"
+      date: "2021"
       description: "A multimedia science-fiction project exploring the intersection of narrative and technology. Resulted in multiple software applications with emphasis on design quality and technical robustness."
       image: "https://raw.githubusercontent.com/sumartian-studios/.github/master/assets/banner.png"
       link: "https://github.com/sumartian-studios"
@@ -182,11 +182,6 @@ params:
       image: "/images/project-2.png"
       link: "https://github.com/kaiyanlee/kaiyanlee.github.io"
 
-    - name: "Miscellaneous Projects"
-      date: "2023 - Current"
-      description: "Built various projects for private clients, showcasing a diverse range of technical skills."
-      image: "/images/project-3.png"
-      link: "https://github.com/kaiyanlee/kaiyanlee.github.io"
 
   specializations:
     - name: Cross-Platform
